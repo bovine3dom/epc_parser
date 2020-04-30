@@ -18,7 +18,7 @@
     const url = document.location.href
     if (url.match(/zoopla\.co\.uk\/(to-rent|for-sale|new-homes)/) !== null) {
         if (url.match(/property/) !== null){
-            for (let x of document.querySelectorAll("a.listing-results-price.text-price")){
+            for (let x of document.querySelectorAll("a.listing-results-price.text-price, a.lsrp-property-card__pricing-link")){
                 epc_nabber_element(x).then(r=> {
                     try {
                         x.parentElement.parentElement.querySelector("div.status-wrapper").children[1].appendChild(r)
