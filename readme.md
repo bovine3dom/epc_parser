@@ -34,3 +34,7 @@ My first proof of concept used `GraphicsMagick` and `tesseract` to crop and then
 Easy mode: can train with https://teachablemachine.withgoogle.com/train/image
 
 The problem: need lots of data. Solution: generate our own. Need various levels of JPG-ification, PNG dithering, shapes of arrows, slightly different colours, slightly different fonts.
+
+### Add EPC images to listing pages
+
+Done, for Zoopla - see src/webextension/.
