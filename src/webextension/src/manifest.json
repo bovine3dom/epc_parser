@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "EPC inliner for Zoopla",
-    "version": "0.0.2",
+    "name": "EPC inliner for Zoopla and rightmove",
+    "version": "0.0.3",
     "icons": {
     },
     "content_scripts": [
