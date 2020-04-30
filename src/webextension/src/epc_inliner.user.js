@@ -1,20 +1,22 @@
 // ==UserScript==
 // @name         Energy Performance Certificate (EPC) inliner
 // @namespace    https://tridactyl.xyz
-// @version      0.2
+// @version      0.0.2
 // @description  Inlines EPC images on estate agent listing pages. Currently only works on Zoopla.
 // @author       bovine3dom
 // @match        https://www.zoopla.co.uk/to-rent/details/*
 // @match        https://www.zoopla.co.uk/for-sale/details/*
+// @match        https://www.zoopla.co.uk/new-homes/details/*
 // @match        https://www.zoopla.co.uk/to-rent/property/*
 // @match        https://www.zoopla.co.uk/for-sale/property/*
+// @match        https://www.zoopla.co.uk/new-homes/property/*
 // @grant        none
 // ==/UserScript==
 
 (function() {
     'use strict'
     const url = document.location.href
-    if (url.match(/zoopla\.co\.uk\/(to-rent|for-sale)/) !== null) {
+    if (url.match(/zoopla\.co\.uk\/(to-rent|for-sale|new-homes)/) !== null) {
         if (url.match(/property/) !== null){
             for (let x of document.querySelectorAll("a.listing-results-price.text-price")){
                 epc_nabber_element(x).then(r=> {
@@ -40,7 +42,7 @@ function page2epc_element(page){
         return img
     } catch(e) {
         const div = document.createElement("div")
-        div.innerHTML = "<b>NB:</b> No EPC found for this property. Expect the worst."
+        div.innerHTML = "<b>NB:</b> No EPC found for this property."
         return div
     }
 }
