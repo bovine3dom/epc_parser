@@ -7,7 +7,8 @@
     "content_scripts": [
         {
             "matches": [
-                "*://*.zoopla.co.uk/*"
+                "*://*.zoopla.co.uk/*",
+                "*://*.rightmove.co.uk/*"
             ],
             "js": [
                 "epc_inliner.user.js"
