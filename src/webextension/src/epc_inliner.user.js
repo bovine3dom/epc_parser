@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Greendigger
 // @namespace    https://tridactyl.xyz
-// @version      0.0.5
+// @version      0.0.6
 // @description  Helps you to find digs that are green. Inlines EPC images on listing pages for Zoopla and Rightmove.
 // @author       bovine3dom
 // @match        https://www.zoopla.co.uk/*
@@ -13,7 +13,7 @@
     'use strict'
     const url = document.location.href
     if (url.match(/zoopla\.co\.uk\/(to-rent|for-sale|new-homes)/) !== null) {
-        if (url.match(/property/) !== null){
+        if (url.match(/(property|flats|houses)/) !== null){
             for (let x of document.querySelectorAll("a.listing-results-price.text-price, a.lsrp-property-card__pricing-link")){
                 fake_page(x).then(r=> {
                     r = zp_page2epc_element(r)
