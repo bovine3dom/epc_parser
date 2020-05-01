@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Greendigger
 // @namespace    https://tridactyl.xyz
-// @version      0.0.4
+// @version      0.0.5
 // @description  Helps you to find digs that are green. Inlines EPC images on listing pages for Zoopla and Rightmove.
 // @author       bovine3dom
 // @match        https://www.zoopla.co.uk/*
@@ -52,8 +52,8 @@ function error_div(){
 
 async function fake_page(link){
     const page = await (await fetch(link)).text()
-    const dummy = document.createElement('html')
-    dummy.innerHTML = page
+    const parser = new DOMParser()
+    const dummy = parser.parseFromString(page, 'text/html')
     return dummy
 }
 
