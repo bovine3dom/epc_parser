@@ -1,8 +1,12 @@
 {
     "manifest_version": 2,
-    "name": "EPC inliner for Zoopla and rightmove",
-    "version": "0.0.3",
+    "name": "Greendigger",
+    "version": "0.0.4",
     "icons": {
+        "48": "logo/logo.png",
+        "96": "logo/logo@2x.png",
+        "144": "logo/logo@3x.png",
+        "192": "logo/logo@4x.png"
     },
     "content_scripts": [
         {

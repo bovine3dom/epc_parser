@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Energy Performance Certificate (EPC) inliner
+// @name         Greendigger
 // @namespace    https://tridactyl.xyz
-// @version      0.0.3
-// @description  Inlines EPC images on estate agent listing pages for Zoopla and Rightmove.
+// @version      0.0.4
+// @description  Helps you to find digs that are green. Inlines EPC images on listing pages for Zoopla and Rightmove.
 // @author       bovine3dom
 // @match        https://www.zoopla.co.uk/*
 // @match        https://www.rightmove.co.uk/*
