@@ -35,6 +35,6 @@ Easy mode: can train with https://teachablemachine.withgoogle.com/train/image
 
 The problem: need lots of data. Solution: generate our own. Need various levels of JPG-ification, PNG dithering, shapes of arrows, slightly different colours, slightly different fonts.
 
-### Add EPC images to listing pages
+### Add EPC images to listing pages ("Greendigger")
 
-Done, for Zoopla - see src/webextension/.
+Done, for Zoopla and rightmove - see src/webextension/. Should be available soon at https://addons.mozilla.org/en-GB/firefox/addon/greendigger/
