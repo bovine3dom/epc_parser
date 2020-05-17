@@ -91,7 +91,7 @@ async function rm_epc_nabber_element(link){
 }
 
 async function rm_page2epc_url(page){
-    const redir_link = document.evaluate("//h3[contains(., 'Energy Performance Certificate (EPC) graphs')]", page, null, XPathResult.ANY_TYPE, null ).iterateNext().parentNode.querySelector("a").href
+    const redir_link = page.evaluate("//h3[contains(., 'Energy Performance Certificate (EPC) graphs')]", page, null, XPathResult.ANY_TYPE, null ).iterateNext().parentNode.querySelector("a").href
     const dummy = await fake_page(redir_link)
     return dummy.querySelector("a").href
 }
