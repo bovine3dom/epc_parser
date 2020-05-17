@@ -11,6 +11,11 @@
 
 (function() {
     'use strict'
+    show_epcs()
+})()
+
+// Generic
+function show_epcs(){
     const url = document.location.href
     if (url.match(/zoopla\.co\.uk\/(to-rent|for-sale|new-homes)/) !== null) {
         if (url.match(/(property|flats|houses)/) !== null){
@@ -41,9 +46,8 @@
             }
         }
     }
-})()
+}
 
-// Generic
 function error_div(){
     const div = document.createElement("div")
     div.innerHTML = "<b>NB:</b> No EPC found for this property."
@@ -95,3 +99,8 @@ async function rm_page2epc_url(page){
     const dummy = await fake_page(redir_link)
     return dummy.querySelector("a").href
 }
+
+// Fix next/previous buttons not triggering EPCs on rightmove
+document.addEventListener("transitionend", x=> {
+    x.target.className == "searchLoading" && show_epcs()
+})
