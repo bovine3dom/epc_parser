@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Greendigger
 // @namespace    https://tridactyl.xyz
-// @version      0.0.6
+// @version      0.0.7
 // @description  Helps you to find digs that are green. Inlines EPC images on listing pages for Zoopla and Rightmove.
 // @author       bovine3dom
 // @match        https://www.zoopla.co.uk/*

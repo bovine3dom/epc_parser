@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Greendigger",
-    "version": "0.0.5",
+    "version": "0.0.7",
     "description": "Helps you to find digs that are green. Inlines EPC (energy performance certificate) images on listing pages for Zoopla and Rightmove.",
     "icons": {
         "48": "logo/logo.png",
